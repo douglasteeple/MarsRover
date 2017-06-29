@@ -22,9 +22,9 @@
 
 [//]: # (Image References)
 
-[image1]: ./misc/rover_image.jpg
-[image2]: ./calibration_images/example_grid1.jpg
-[image3]: ./calibration_images/example_rock1.jpg 
+[image1]: http://douglasteeple.com/RoboND/misc/rover_image.jpg
+[image2]: http://douglasteeple.com/RoboND/calibration_images/example_grid1.jpg
+[image3]: http://douglasteeple.com/RoboND/calibration_images/example_rock1.jpg 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -66,8 +66,8 @@ and the worldmap size and scale.
 I ran it twice, once on the given test data (`test_mapping.mp4`) and on my sample data which included a rock (`doug_mapping.mp4`).
 The movie files can be found in the `output` directory.
 
-[image3]: ./output/test_mapping.mp4
-[image4]: ./output/doug_mapping.mp4
+[image3]: http://douglasteeple.com/RoboND/output/test_mapping.mp4
+[image4]: http://douglasteeple.com/RoboND/output/doug_mapping.mp4
 
 <center>
 ### Mapping Movie Output
@@ -77,10 +77,10 @@ The movie files can be found in the `output` directory.
     </tr>
     <tr>
         <td>
-            <iframe height="240" src="./output/test_mapping.mp4" allowfullscreen></iframe>
+            <iframe height="240" src="http://douglasteeple.com/RoboND/output/test_mapping.mp4" allowfullscreen></iframe>
         </td>
         <td>
-            <iframe height="240" src="./output/doug_mapping.mp4" allowfullscreen></iframe>
+            <iframe height="240" src="http://douglasteeple.com/RoboND/output/doug_mapping.mp4" allowfullscreen></iframe>
         </td>
     </tr>
 </table>
@@ -208,9 +208,9 @@ I experimented with using the median nav angle rather than the mean in decision.
 I also experimented with a search optimization that used an A* type weighting that added the angle to the nearest rock to the nav angles. This however did not work as it caused too much instability in steering. One thought was to smooth the steering angle with PID smoothing but I did not get a chance to debug it.
 
 
-[image5]: ./output/NDRobot2.m4v
-[image6]: ./output/6RocksNoGoal
-[image7]: ./output/5Rocks.png
+[image5]: http://douglasteeple.com/RoboND/output/NDRobot2.m4v
+[image6]: http://douglasteeple.com/RoboND/output/6RocksNoGoal
+[image7]: http://douglasteeple.com/RoboND/output/5Rocks.png
 
 <hr>
 <center>
@@ -221,10 +221,10 @@ I also experimented with a search optimization that used an A* type weighting th
     </tr>
     <tr>
         <td>
-            <p align=center><iframe height="240" src="./output/NDRobot2.m4v" allowfullscreen></iframe></p>
+            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/NDRobot2.m4v" allowfullscreen></iframe></p>
         </td>
         <td>
-            <p align=center><iframe height="240" src="./output/6RocksNoGoal.m4v" allowfullscreen></iframe></p>
+            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/6RocksNoGoal.m4v" allowfullscreen></iframe></p>
         </td>
     </tr>
     <tr>
@@ -240,10 +240,10 @@ I also experimented with a search optimization that used an A* type weighting th
     </tr>
     <tr>
         <td>
-            <p align=center><img height="311" width="400" src="./output/5Rocks.png"/></p>
+            <p align=center><img height="311" width="400" src="http://douglasteeple.com/RoboND/output/5Rocks.png"/></p>
         </td>
         <td>
-            <p align=center><iframe height="240" src="./output/6RocksGoal2.m4v" allowfullscreen></iframe></p>
+            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/6RocksGoal2.m4v" allowfullscreen></iframe></p>
         </td>
     </tr>
     <tr>
