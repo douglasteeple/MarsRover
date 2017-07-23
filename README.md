@@ -70,10 +70,10 @@ The movie files can be found in the `output` directory.
     </tr>
     <tr>
         <td>
-            <a href="http://douglasteeple.com/RoboND/output/test_mapping.png" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/test_mapping.mp4"></a>
+            <a href="http://douglasteeple.com/RoboND/output/test_mapping.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/test_mapping.png"/></a>
         </td>
         <td>
-            <a href="http://douglasteeple.com/RoboND/output/doug_mapping.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/doug_mapping.png"></a>
+            <a href="http://douglasteeple.com/RoboND/output/doug_mapping.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/doug_mapping.png"/></a>
         </td>
     </tr>
 </table>
@@ -237,7 +237,7 @@ I also experimented with a search optimization that used an A* type weighting th
             <p align=center><img height="311" width="400" src="http://douglasteeple.com/RoboND/output/5Rocks.png"/></p>
         </td>
         <td>
-            <p align=center><a href="http://douglasteeple.com/RoboND/output/6RocksGoal2.png" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/6RocksGoal2.mp4"></a></p>
+            <p align=center><a href="http://douglasteeple.com/RoboND/output/6RocksGoal2.mp4" target=_blank><img  height="311" width="400" src="http://douglasteeple.com/RoboND/output/6RocksGoal2.png"></a></p>
         </td>
     </tr>
     <tr>
