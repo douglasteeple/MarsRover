@@ -1,5 +1,5 @@
-# audacity-robotics
-## Project: Search and Sample Return
+# Udacity Mars Rover
+## Project: Search and Sample Return NASA Challenge
 
 ---
 
@@ -26,15 +26,8 @@
 [image2]: http://douglasteeple.com/RoboND/calibration_images/example_grid1.jpg
 [image3]: http://douglasteeple.com/RoboND/calibration_images/example_rock1.jpg 
 
-## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
-
 ### Notebook Analysis
+
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
 
 First I took a series of images from the simulator and stored them in dataset/IMG/. I then stepped through the notebook
@@ -69,28 +62,28 @@ The movie files can be found in the `output` directory.
 [image3]: http://douglasteeple.com/RoboND/output/test_mapping.mp4
 [image4]: http://douglasteeple.com/RoboND/output/doug_mapping.mp4
 
-<center>
 ### Mapping Movie Output
+<center>
 <table>
     <tr>
         <th>Test Output</th><th>Doug's Output</th>
     </tr>
     <tr>
         <td>
-            <iframe height="240" src="http://douglasteeple.com/RoboND/output/test_mapping.mp4" allowfullscreen></iframe>
+            <a href="http://douglasteeple.com/RoboND/output/test_mapping.png" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/test_mapping.mp4"></a>
         </td>
         <td>
-            <iframe height="240" src="http://douglasteeple.com/RoboND/output/doug_mapping.mp4" allowfullscreen></iframe>
+            <a href="http://douglasteeple.com/RoboND/output/doug_mapping.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/doug_mapping.png"></a>
         </td>
     </tr>
 </table>
 </center>
 
-### Autonomous Navigation and Mapping
+## Autonomous Navigation and Mapping
 
-#### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
+### A) Fill in the `perception_step()`
 
-## 1. The Perception Step
+#### 1. The Perception Step
 
  * I took the basic code from `process_image`, but added the `Rover.Vision_image` steps to record the inset images.
     The basic steps for the three color selections are as per `process_image`.
@@ -106,8 +99,9 @@ The movie files can be found in the `output` directory.
 
 All of the result images can be viewed in the notebook.
 
+### B) Modify the Decision Step to reach the end goal
 
-## 2. The Decision Step
+#### 2. The Decision Step
 
     Most of the changes were in the decision step. I added the following functionality:
 
@@ -169,12 +163,12 @@ Implementation:
         angle and drives backwards for `Rover.backup_threshold` data cycles. It then stops, steers in the 
         opposite direction and goes forward again.
 
-## 3. Other Changes
+### C) Other Changes
  - `supporting_functions`: A step was added to check that the goal has been achieved, which sets the new Rover field `success`
     to true `if (perc_mapped>40) & (fidelity>60) & (Rover.rocks_picked_up>=6)`
 
 
-## 4. Tips Implemented and Further Work Needed
+### D) Tips Implemented and Further Work Needed
 
     `Optimizing Map Fidelity`: I had no trouble with fidelity. Tweaking the `brake_set`, and the `throttle_set` values gave adequate fidelity numbers.
 
@@ -190,7 +184,7 @@ Implementation:
     see that some are darker yellow. The existing color has been tuned to work, but really a better `distance` algorithm 
     should be implemented.
 
-## 5. Results
+### F) Results
 
 Here are two results shown as videos where the robot picks up 3 rocks, and brings them back home, and stops and declares that the goal has been
 reached. The given goal was >40% mapped, >60% fidelity, at least one rock picked up, and returned within 3 meters of the
@@ -212,19 +206,19 @@ I also experimented with a search optimization that used an A* type weighting th
 [image6]: http://douglasteeple.com/RoboND/output/6RocksNoGoal
 [image7]: http://douglasteeple.com/RoboND/output/5Rocks.png
 
+#### Example Movie Output from Rover Simulator
 <hr>
 <center>
-### Example Movie Output from Rover Simulator
 <table border=1>
     <tr>
         <th>3 rocks picked up and returned to goal</th><th>6 rocks, but no goal</th>
     </tr>
     <tr>
         <td>
-            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/NDRobot2.m4v" allowfullscreen></iframe></p>
+          <p align=center><a href="http://douglasteeple.com/RoboND/output/NDRobot2.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/NDRobot2.png"></a></p>
         </td>
         <td>
-            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/6RocksNoGoal.m4v" allowfullscreen></iframe></p>
+            <p align=center><a href="http://douglasteeple.com/RoboND/output/6RocksNoGoal.mp4" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/6RocksNoGoal.png"></a></p>
         </td>
     </tr>
     <tr>
@@ -243,7 +237,7 @@ I also experimented with a search optimization that used an A* type weighting th
             <p align=center><img height="311" width="400" src="http://douglasteeple.com/RoboND/output/5Rocks.png"/></p>
         </td>
         <td>
-            <p align=center><iframe height="240" src="http://douglasteeple.com/RoboND/output/6RocksGoal2.m4v" allowfullscreen></iframe></p>
+            <p align=center><a href="http://douglasteeple.com/RoboND/output/6RocksGoal2.png" target=_blank><img height="240" src="http://douglasteeple.com/RoboND/output/6RocksGoal2.mp4"></a></p>
         </td>
     </tr>
     <tr>
@@ -257,7 +251,8 @@ I also experimented with a search optimization that used an A* type weighting th
 </table>
 </center>
 <hr>
-#### Note that the Rover stops and declares victory (`Yahoo! in yellow`) after achieving the task requirements and returning to the home position.
+
+#### Note that the Rover stops and declares victory ("Yahoo! in yellow") after achieving the task requirements and returning to the home position.
 
 
 
