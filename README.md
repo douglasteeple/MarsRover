@@ -8,7 +8,7 @@
 
 **Training / Calibration**  
 
-* Download the simulator and take data in "Training Mode"
+* Download the Unity simulator and take data in "Training Mode"
 * Test out the functions in the Jupyter Notebook provided
 * Add functions to detect obstacles and samples of interest (golden rocks)
 * Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` you create in this step should demonstrate that your mapping pipeline works.
